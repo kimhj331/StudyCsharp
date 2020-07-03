@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using static System.Console; // Console.Writeline -> WriteLine
 
 namespace HelloApp
 {
@@ -10,6 +6,12 @@ namespace HelloApp
     {
         static void Main(string[] args)
         {
+            if (args.Length == 0)
+            {
+                WriteLine("사용법 : HelloApp.exe <이름>");
+                return;
+            }
+            WriteLine($"Hello, {args[0]}!");
         }
     }
 }
